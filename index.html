@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{site.data.general.title}}</title>
-    <meta name="description" content="{{description}}">
-    <meta name="author" content="{{author}}">
+    <meta name="description" content="{{site.data.general.description}}">
+    <meta name="author" content="{{site.data.general.title}}">
 
-    <meta property="og:title" content="{{webTitle}}">
+    <meta property="og:title" content="{{site.data.general.title}}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{url}}">
-    <meta property="og:description" content="{{description}}">
+    <meta property="og:url" content="{{site.data.general.url}}">
+    <meta property="og:description" content="{{site.data.general.description}}">
     <meta property="og:image" content="{{socialImage}}">
 
     <link rel="icon" href="favicon.png">
@@ -24,18 +24,23 @@
 
     <link rel="stylesheet" href="css/styles.css?v=1.0">
 
+    <meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="{{site.data.general.url}}" />
+
 </head>
 
 <body>
     <header>
         <div class="row gray">
             <div class="container right padded">
-                <a href="tel:{{phone}}">{{phone}}</a> / <a href="mailto:{{email}}" target="_blank">{{email}}</a>
+                <a href="tel:{{site.data.general.phone}}">{{site.data.general.phone}}</a> / <a href="mailto:{{site.data.general.email}}" target="_blank">{{site.data.general.email}}</a>
             </div>
         </div>
         <div class="row">
             <div class="container paddedx2">
-                <a href="https://limpiaplus.com/" rel="home">
+                <a href="{{site.data.general.url}}" rel="home">
                     <img width="408" height="100" src="images/logo.png" alt="Limpiaplus" sizes="(max-width: 408px) 100vw, 408px">
                 </a>
             </div>
