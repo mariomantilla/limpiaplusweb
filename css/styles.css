@@ -52,3 +52,7 @@ a:hover,
 a:focus {
     color: #1f6180;
 }
+
+.fright {
+    float: right;
+}

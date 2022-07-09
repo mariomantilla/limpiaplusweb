@@ -43,10 +43,15 @@
                 <a href="{{site.data.general.url}}" rel="home">
                     <img width="408" height="100" src="images/logo.png" alt="Limpiaplus" sizes="(max-width: 408px) 100vw, 408px">
                 </a>
+                <nav class="fright">
+                    {% for section in site.sections %}
+                        <h2>{{ section.title }}</h2>
+                        <p>{{ section.content }}</p>
+                    {% endfor %}
+                </nav>
             </div>
         </div>
     </header>
-    <!-- your content here... -->
     <script src="js/scripts.js"></script>
 </body>
 
