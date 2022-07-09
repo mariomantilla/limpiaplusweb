@@ -7,14 +7,18 @@ body {
     line-height: 1.8;
     font-weight: 400;
     font-style: normal;
+    font-family: Montserrat, sans-serif;
 }
 
-div.row {
+html {
+    scroll-behavior: smooth;
+  }
+
+.row {
     width: 100%;
 }
 
 div.container {
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -22,6 +26,28 @@ div.container {
 @media (min-width: 1200px) {
     div.container {
         max-width: 1170px;
+    }
+    nav {
+        float: right;
+    }
+    nav a:last-child {
+        margin-right: 0;
+    }
+    .card {
+        width: 300px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        text-align: center;
+    }
+    .hideOnSmall {
+        display: none;
+    }
+    .logo {
+        width: calc(100% - 32px);
+        height: auto;
     }
 }
 
@@ -33,12 +59,20 @@ div.right {
     text-align: right;
 }
 
+div.center {
+    text-align: center;
+}
+
 div.padded {
     padding: 8px;
 }
 
 div.paddedx2 {
     padding: 16px;
+}
+
+div.paddedx3 {
+    padding: 32px;
 }
 
 a {
@@ -49,10 +83,169 @@ a {
 }
 
 a:hover,
-a:focus {
+a:focus, a.active {
     color: #1f6180;
 }
 
-.fright {
-    float: right;
+nav a {
+    margin: 0 15px 0 15px;
+    position: relative;
+    font-size: 18px;
+}
+
+nav a.active::before {
+    background-color: rgb(31, 97, 128);
+    bottom: -5px;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    right: -5px;
+    left: -5px;
+}
+
+nav {
+    padding: 30px 0;
+}
+
+.banner {
+    background-image: url(../images/coronavirus.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    background-color: #000;
+    padding: 20px;
+    position: relative;
+}
+
+.banner .container {
+    position: relative;
+}
+
+.banner .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.44;
+}
+
+.spaced {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+a.button {
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 89%);
+    margin: 15px;
+}
+
+a.button:hover {
+    background-color: #1f6180;
+    color: #fff;
+}
+
+div.flexible {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.flexible div {
+    flex: 1 1 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: Poppins, sans-serif;
+    position: relative;
+}
+
+h1::first-letter {
+    font-size: 5rem;
+}
+
+h1::before {
+    /*background-color: rgb(31, 97, 128);*/
+    top: -10px;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    background-image: radial-gradient(black 1px, transparent 0);
+    background-size: 10px 10px;
+    height: 150px;
+    position: absolute;
+    width: 150px;
+    left: -50px;
+    opacity: 0.9;
+}
+
+
+h2 {
+    color: #1f6180;
+    font-size: 2.3rem;
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+}
+
+h3 {
+    font-family: Poppins, sans-serif;
+}
+
+.banner h3 {
+    font-size: 2.3rem;
+}
+
+.card {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    text-align: center;
+}
+
+.card div {
+    text-align: left;
+    padding: 0 20px 15px 20px;
+}
+
+.card h2 {
+    margin: 10px 0;
+}
+.card i {
+    color: #1f6180;
+    font-size: 48px;
+    padding-top: 15px;
+}
+
+#goToTop {
+    position: sticky;
+    height: 0;
+    z-index: 100;
+    top: calc(100% - 90px);   
+}
+
+#goToTop a {
+    display: block;
+    background: #000;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 16px 20px;
+    line-height: 24px;
+    width: 30px;
+    margin-left: auto;
+    margin-right: 30px;
 }

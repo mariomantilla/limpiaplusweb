@@ -23,6 +23,7 @@
     <link rel="apple-touch-icon" href="favicon.png">
 
     <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.4.1' type='text/css' media='all' />
 
     <meta name="robots" content="index, follow" />
 	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -41,17 +42,43 @@
         <div class="row">
             <div class="container paddedx2">
                 <a href="{{site.data.general.url}}" rel="home">
-                    <img width="408" height="100" src="images/logo.png" alt="Limpiaplus" sizes="(max-width: 408px) 100vw, 408px">
+                    <img width="408" height="100" src="images/logo.png" class="logo" alt="Limpiaplus" sizes="(max-width: 408px) 100vw, 408px">
                 </a>
-                <nav class="fright">
-                    {% for section in site.sections %}
-                        <a href="#{{section.title | slugify}}">{{ section.title }}</a>
+                <nav>
+                    <a href="#" class="active">Inicio</a>
+                    {% assign sections = site.sections | sort: "order" %}
+                    {% for section in sections %}
+                        |
+                        <a href="#{{section.path | remove: "_sections/" | remove: ".html" }}">{{ section.title }}</a>
                     {% endfor %}
                 </nav>
             </div>
         </div>
     </header>
-    <script src="js/scripts.js"></script>
+    <main>
+        <section class="banner">
+            <div class="overlay"></div>
+            <div class="container">
+                <h3>Desinfección COVID-19</h3>
+                <h4>
+                    Utilizamos las técnicas y productos recomendados por el Ministerio de Sanidad contra el nuevo coronavirus. <br>
+                    Incluido el Certificado de Desinfección para la tranquilidad de los usuarios. <br>
+                    Dada la situación actual, Limpiaplus ha centrado sus recursos en ofrecer este nuevo servicio. Comprometidos con la seguridad y la higiene cuando más lo necesitas.
+                </h4>
+                <div class="spaced">
+                    <a class="button" href="#contacto">Más información</a>
+                    <a class="button" href="tel:{{site.data.general.phone}}">Llama ahora y pide presupuesto</a>
+                </div>
+            </div>
+        </section>
+        {% for section in sections %}
+            <section class="row" id="{{section.path | remove: "_sections/" | remove: ".html" }}">
+                {{section.content}}
+            </section>
+            {% if forloop.index == 1 %}<div id="goToTop"><a href="#"><i class="fa-solid fa-arrow-up"></i></a></div>{%endif%}
+        {% endfor %}
+    </main>
+    <script src="https://kit.fontawesome.com/adb72a7aa1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

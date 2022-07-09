@@ -1,4 +1,44 @@
 ---
-title: "Quienes Somos"
+title: "Quiénes Somos"
+order: 1
+
+subtitle: "En el equipo de Limpiaplus, desde más de 30 años, nos hemos comprometido con dar el mejor servicio en Córdoba y provincia, siendo muy cuidadosos con la calidad que ofrecemos y la cercanía con los clientes."
+text: "La misión de Limpiaplus es sencilla: proporcionar servicios de alta calidad en tiempo y forma. Nuestro equipo se adapta a cubrir las necesidades específicas para garantizar la excelencia. Somos expertos en cubrir sus necesidades."
+cards:
+    -
+        icon: paper-plane
+        title: "Misión"
+        text: "Nuestros profesionales saben exactamente cómo cuidar de la limpieza e higiene de cada uno de nuestros espacios de trabajo, vivienda u ocio."
+    -
+        icon: clipboard-check
+        title: "Visión"
+        text: "Tu entorno siempre limpio y confortable. Nosotros ponemos las herramientas y la técnica. Garantizamos la seguridad y eficacia."
+    -
+        icon: heart
+        title: "Valores"
+        text: "Cercanía y calidad excelente son las máximas que nos mueven. Es la única manera de satisfacer sus necesidades, estamos convencidos."
 ---
-<b>Hola</b>
+<div class="container flexible">
+    <div class="center paddedx3 hideOnSmall">
+        <img height="550" src="images/vacuum-cleaner.jpg" sizes="(max-width: 427px) 100vw, 427px">
+    </div>
+    <div class="paddedx3">
+        <h1>{{page.title}}</h1>
+        <h3>{{page.subtitle}}</h3>
+        <div>{{page.text}}</div>
+    </div>
+</div>
+<div style="
+    background-image: url('images/stairs.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+" class="paddedx3 spaced">
+    {% for card in page.cards %}
+    <div class="card paddedx2">
+        <i class="fa-solid fa-{{card.icon}}"></i>
+        <h2>{{card.title}}</h2>
+        <div>{{card.text}}</div>
+    </div>
+    {% endfor %}
+</div>
