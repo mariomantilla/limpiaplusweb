@@ -1,0 +1,54 @@
+body {
+    padding: 0;
+    margin: 0;
+    color: #222222;
+    font-family: -apple-system, blinkmacsystemfont, segoe ui, roboto, oxygen-sans, ubuntu, cantarell, helvetica neue, helvetica, arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    font-style: normal;
+}
+
+div.row {
+    width: 100%;
+}
+
+div.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+    div.container {
+        max-width: 1170px;
+    }
+}
+
+div.gray {
+    background-color: #e9ecef;
+}
+
+div.right {
+    text-align: right;
+}
+
+div.padded {
+    padding: 8px;
+}
+
+div.paddedx2 {
+    padding: 16px;
+}
+
+a {
+    color: #16181a;
+    text-decoration: none;
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    color: #1f6180;
+}
