@@ -73,10 +73,8 @@ if (getCookie('limpiaplusConsent'))  {
     console.log('consent given');
     document.dispatchEvent(consentEvent);
 } else {
-    document.getElementById('consentModal').style.height = '200px';
     document.getElementById('consentModal').style.bottom = '0px';
     document.addEventListener('consent', function () {
-        document.getElementById('consentModal').style.height = '0px';
-        document.getElementById('consentModal').style.bottom = '-200px';
+        document.getElementById('consentModal').style.bottom = '-100%';
     });
 }

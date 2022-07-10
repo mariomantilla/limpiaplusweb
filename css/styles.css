@@ -57,6 +57,12 @@ div.container {
     div.flexible.cols2 > div {
         flex: 1 0 100% !important;
     }
+    .formWrapper {
+        margin: 50px !important;
+    }
+    .formWrapper .form-group label {
+        margin-left: 5px !important;
+    }
 }
 
 div.gray {
@@ -425,7 +431,7 @@ footer a:hover {
     background-color: #1f6180;
     color: #fff;
     position: fixed;
-    bottom: -200px;
+    bottom: -100%;
     width: 100vw;
     box-sizing: border-box;
     padding: 40px;
