@@ -20,9 +20,9 @@ La finalidad del sitio Web https://www.limpiaplus.com es Servicios de limpieza.
 ### Condiciones de Uso
 La utilización del sitio Web te otorga la condición de Usuario, e implica la aceptación completa de todas las cláusulas y condiciones de uso incluidas en las páginas:
 
- - [Aviso Legal]({% link _legal/legal.md %})
- - [Política de Privacidad]({% link _legal/privacy.md %})
- - [Política de Cookies]({% link _legal/cookies.md %})
+ - [Aviso Legal]({{ 'legal/legal.html' | relative_url }})
+ - [Política de Privacidad]({{ 'legal/privacy.html' | relative_url }})
+ - [Política de Cookies]({{ 'legal/cookies.html' | relative_url }})
 
 Si no estás conforme con todas y cada una de estas cláusulas y condiciones te abstendrás de utilizar este sitio Web.
 
@@ -38,7 +38,7 @@ Los datos personales que facilites al Titular pueden ser almacenados en bases de
 No obstante, debes ser consciente de que las medidas de seguridad de los sistemas informáticos en Internet no son enteramente fiables y que, por tanto el Titular no puede garantizar la inexistencia de virus u otros elementos que puedan producir alteraciones en los sistemas informáticos (software y hardware) del Usuario o en sus documentos electrónicos y ficheros contenidos en los mismos aunque el Titular pone todos los medios necesarios y toma las medidas de seguridad oportunas para evitar la presencia de estos elementos dañinos.
 
 ### Datos personales
-Puedes consultar toda la información relativa al tratamiento de datos personales que recoge el Titular en la página de [Política de Privacidad]({% link _legal/privacy.md %}).
+Puedes consultar toda la información relativa al tratamiento de datos personales que recoge el Titular en la página de [Política de Privacidad]({{ 'legal/privacy.html' | relative_url }}).
 
 ### Contenidos
 El Titular ha obtenido la información, el contenido multimedia y los materiales incluidos en el sitio Web de fuentes que considera fiables, pero, si bien ha tomado todas las medidas razonables para asegurar que la información contenida es correcta, el Titular no garantiza que sea exacta, completa o actualizada. Limpiaplus Gestión Integral de Limpieza S.L. declina expresamente cualquier responsabilidad por error u omisión en la información contenida en las páginas de este sitio Web.

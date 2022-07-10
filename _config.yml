@@ -2,4 +2,13 @@ collections:
   legal:
     output: true
   sections:
-    output: false  
+    output: false
+
+title: "Limpiaplus, Gestión integral de limpieza"
+description: "30 años de experiencia en limpieza de comunidades/mancomunidades, oficinas y garajes. Pulimento y abrillantado de pavimentos, limpieza de terminación de obra."
+phone: "+34 670 08 13 12"
+email: "info@limpiaplus.com"
+days: "Lunes a Viernes"
+hours: "09:30 – 14:00 y 17:30 – 20:00"
+address: "Centro de negocios Los Azahares, Av. Guerrita, S/N"
+address2: "14005, Córdoba"

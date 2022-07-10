@@ -42,7 +42,7 @@ services:
     {% endfor %}
 </div>
 <div style="
-background-image: url('images/save.jpg');
+background-image: url('{{ '/images/save.jpg' | relative_url }}');
 background-position: center center;
 background-repeat: no-repeat;
 background-size: cover;

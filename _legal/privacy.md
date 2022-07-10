@@ -6,7 +6,7 @@ Limpiaplus Gestión Integral de Limpieza S.L. te informa sobre su Política de P
 
 En este sentido, Limpiaplus Gestión Integral de Limpieza S.L. garantiza el cumplimiento de la normativa vigente en materia de protección de datos personales, reflejada en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y de Garantía de Derechos Digitales (LOPD GDD). Cumple también con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a la protección de las personas físicas (RGPD).
 
-El uso de sitio Web implica la aceptación de esta Política de Privacidad así como las condiciones incluidas en el [Aviso Legal]({% link _legal/legal.md %})
+El uso de sitio Web implica la aceptación de esta Política de Privacidad así como las condiciones incluidas en el [Aviso Legal]({{ 'legal/legal.html' | relative_url }})
 
 ### Identidad del responsable
  - **Titular**: Limpiaplus Gestión Integral de Limpieza S.L..
@@ -50,7 +50,7 @@ Tienes derecho a la tutela judicial efectiva y a presentar una reclamación ante
 
 ### Finalidad del tratamiento de datos personales
 
-Cuando te conectas al sitio Web para mandar un correo al Titular, te suscribes a su boletín estás facilitando información de carácter personal de la que el responsable es Limpiaplus Gestión Integral de Limpieza S.L.. Esta información puede incluir datos de carácter personal como pueden ser tu dirección IP, nombre y apellidos, dirección física, dirección de correo electrónico, número de teléfono, y otra información. Al facilitar esta información, das tu consentimiento para que tu información sea recopilada, utilizada, gestionada y almacenada sólo como se describe en el [Aviso Legal]({% link _legal/legal.md %}) y en la presente Política de Privacidad.
+Cuando te conectas al sitio Web para mandar un correo al Titular, te suscribes a su boletín estás facilitando información de carácter personal de la que el responsable es Limpiaplus Gestión Integral de Limpieza S.L.. Esta información puede incluir datos de carácter personal como pueden ser tu dirección IP, nombre y apellidos, dirección física, dirección de correo electrónico, número de teléfono, y otra información. Al facilitar esta información, das tu consentimiento para que tu información sea recopilada, utilizada, gestionada y almacenada sólo como se describe en el [Aviso Legal]({{ 'legal/legal.html' | relative_url }}) y en la presente Política de Privacidad.
 
 Los datos personales y la finalidad del tratamiento por parte del Titular es diferente según el sistema de captura de información:
 
@@ -94,7 +94,7 @@ Estos sitios Web pueden recopilar datos sobre ti, utilizar cookies, incrustar un
 ### Política de Cookies
 Para que este sitio Web funcione correctamente necesita utilizar cookies, que es una información que se almacena en tu navegador web.
 
-En la página [Política de Cookies]({% link _legal/cookies.md %}) puedes consultar toda la información relativa a la política de recogida, la finalidad y el tratamiento de las cookies.
+En la página [Política de Cookies]({{ 'legal/cookies.html' | relative_url }}) puedes consultar toda la información relativa a la política de recogida, la finalidad y el tratamiento de las cookies.
 
 ### Legitimación para el tratamiento de datos
 La base legal para el tratamiento de tus datos es: el consentimiento.

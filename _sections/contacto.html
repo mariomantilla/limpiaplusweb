@@ -21,7 +21,7 @@ order: 3
                     </div>
                     <div class="center">
                     <div>
-                        <label><input class="form-control" id="privacy" name="privacy" type="checkbox" /> He leído y acepto la <a href="{% link _legal/privacy.md %}">política de privacidad</a></label>
+                        <label><input class="form-control" id="privacy" name="privacy" type="checkbox" /> He leído y acepto la <a href="{{ 'legal/privacy.html' | relative_url }}">política de privacidad</a></label>
                     </div>
                     </div>
                     <div class="error"></div>
@@ -34,12 +34,12 @@ order: 3
         <div style="margin-bottom: 50px">
             <h1>{{page.title}}</h1>
             <h2>Visítanos en</h2>
-            {{site.data.general.address}}<br>
-            {{site.data.general.address2}}
+            {{site.address}}<br>
+            {{site.address2}}
             <h2>Teléfono</h2>
-            {{site.data.general.phone}} 
+            {{site.phone}} 
             <h2>Email</h2>
-            {{site.data.general.email}}
+            {{site.email}}
         </div>
     </div>
 </div>

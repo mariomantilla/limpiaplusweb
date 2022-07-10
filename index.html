@@ -12,7 +12,7 @@ layout: default
         </h4>
         <div class="spaced">
             <a class="button" href="#contacto">Más información</a>
-            <a class="button call-now-button" href="tel:{{site.data.general.phone}}">Llama ahora y pide presupuesto</a>
+            <a class="button call-now-button" href="tel:{{site.phone}}">Llama ahora y pide presupuesto</a>
         </div>
     </div>
 </section>
@@ -26,16 +26,16 @@ layout: default
 <section>
     <div class="container flexible cols2 paddedx3">
         <div>
-            <div><img width="408" height="100" src="images/logo.png" class="logo" alt="Limpiaplus" sizes="(max-width: 408px) 100vw, 408px"></div>
+            <div><img width="408" height="100" src="{{ '/images/logo.png' | relative_url }}" class="logo" alt="Limpiaplus" sizes="(max-width: 408px) 100vw, 408px"></div>
             <div>
                 <p>
                     <strong>Horario:</strong><br>
-                    {{site.data.general.days}}<br>
-                    {{site.data.general.hours}}<br>
+                    {{site.days}}<br>
+                    {{site.hours}}<br>
                     <strong>Teléfono:</strong><br>
-                    {{site.data.general.phone}}<br>
+                    {{site.phone}}<br>
                     <strong>Email:</strong><br>
-                    {{site.data.general.email}}</p>
+                    {{site.email}}</p>
             </div>
         </div>
         <div>
