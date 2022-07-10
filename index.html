@@ -1,84 +1,45 @@
---- 
 ---
-
-<!doctype html>
-
-<html lang="es">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{site.data.general.title}}</title>
-    <meta name="description" content="{{site.data.general.description}}">
-    <meta name="author" content="{{site.data.general.title}}">
-
-    <meta property="og:title" content="{{site.data.general.title}}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{site.data.general.url}}">
-    <meta property="og:description" content="{{site.data.general.description}}">
-    <meta property="og:image" content="{{socialImage}}">
-
-    <link rel="icon" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
-
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
-    <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.4.1' type='text/css' media='all' />
-
-    <meta name="robots" content="index, follow" />
-	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-	<link rel="canonical" href="{{site.data.general.url}}" />
-
-</head>
-
-<body>
-    <header>
-        <div class="row gray">
-            <div class="container right padded">
-                <a href="tel:{{site.data.general.phone}}">{{site.data.general.phone}}</a> / <a href="mailto:{{site.data.general.email}}" target="_blank">{{site.data.general.email}}</a>
+layout: default 
+---
+<section class="banner">
+    <div class="overlay"></div>
+    <div class="container">
+        <h3>Desinfección COVID-19</h3>
+        <h4>
+            Utilizamos las técnicas y productos recomendados por el Ministerio de Sanidad contra el nuevo coronavirus. <br>
+            Incluido el Certificado de Desinfección para la tranquilidad de los usuarios. <br>
+            Dada la situación actual, Limpiaplus ha centrado sus recursos en ofrecer este nuevo servicio. Comprometidos con la seguridad y la higiene cuando más lo necesitas.
+        </h4>
+        <div class="spaced">
+            <a class="button" href="#contacto">Más información</a>
+            <a class="button" href="tel:{{site.data.general.phone}}">Llama ahora y pide presupuesto</a>
+        </div>
+    </div>
+</section>
+{% assign sections = site.sections | sort: "order" %}
+{% for section in sections %}
+    <section class="row" id="{{section.path | remove: "_sections/" | remove: ".html" }}">
+        {{section.content}}
+    </section>
+    {% if forloop.index == 1 %}<div id="goToTop"><a href="#"><i class="fa-solid fa-arrow-up"></i></a></div>{%endif%}
+{% endfor %}
+<section>
+    <div class="container flexible cols2 paddedx3">
+        <div>
+            <div><img width="408" height="100" src="images/logo.png" class="logo" alt="Limpiaplus" sizes="(max-width: 408px) 100vw, 408px"></div>
+            <div>
+                <p>
+                    <strong>Horario:</strong><br>
+                    {{site.data.general.days}}<br>
+                    {{site.data.general.hours}}<br>
+                    <strong>Teléfono:</strong><br>
+                    {{site.data.general.phone}}<br>
+                    <strong>Email:</strong><br>
+                    {{site.data.general.email}}</p>
             </div>
         </div>
-        <div class="row">
-            <div class="container paddedx2">
-                <a href="{{site.data.general.url}}" rel="home">
-                    <img width="408" height="100" src="images/logo.png" class="logo" alt="Limpiaplus" sizes="(max-width: 408px) 100vw, 408px">
-                </a>
-                <nav>
-                    <a href="#" class="active">Inicio</a>
-                    {% assign sections = site.sections | sort: "order" %}
-                    {% for section in sections %}
-                        |
-                        <a href="#{{section.path | remove: "_sections/" | remove: ".html" }}">{{ section.title }}</a>
-                    {% endfor %}
-                </nav>
-            </div>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.964025914294!2d-4.7684816848223965!3d37.884523979739576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cdfe1327ecc23%3A0x9dae5c7536f57ce0!2sLimpiaplus!5e0!3m2!1sen!2ses!4v1588526268777!5m2!1sen!2ses" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
-    </header>
-    <main>
-        <section class="banner">
-            <div class="overlay"></div>
-            <div class="container">
-                <h3>Desinfección COVID-19</h3>
-                <h4>
-                    Utilizamos las técnicas y productos recomendados por el Ministerio de Sanidad contra el nuevo coronavirus. <br>
-                    Incluido el Certificado de Desinfección para la tranquilidad de los usuarios. <br>
-                    Dada la situación actual, Limpiaplus ha centrado sus recursos en ofrecer este nuevo servicio. Comprometidos con la seguridad y la higiene cuando más lo necesitas.
-                </h4>
-                <div class="spaced">
-                    <a class="button" href="#contacto">Más información</a>
-                    <a class="button" href="tel:{{site.data.general.phone}}">Llama ahora y pide presupuesto</a>
-                </div>
-            </div>
-        </section>
-        {% for section in sections %}
-            <section class="row" id="{{section.path | remove: "_sections/" | remove: ".html" }}">
-                {{section.content}}
-            </section>
-            {% if forloop.index == 1 %}<div id="goToTop"><a href="#"><i class="fa-solid fa-arrow-up"></i></a></div>{%endif%}
-        {% endfor %}
-    </main>
-    <script src="https://kit.fontawesome.com/adb72a7aa1.js" crossorigin="anonymous"></script>
-</body>
-
-</html>
+    </div>
+</section>

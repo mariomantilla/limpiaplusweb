@@ -1,2 +1,5 @@
 collections:
-  - sections
+  legal:
+    output: true
+  sections:
+    output: false  

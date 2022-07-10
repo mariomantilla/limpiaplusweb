@@ -1,7 +1,59 @@
 ---
 title: "Nuestros Servicios"
 order: 2
+services:
+    -
+        title: "Limpieza de mantenimiento en comunidades y mancomunidades"
+        icon: "building"
+    -   
+        title: "Limpieza terminación de obra"
+        icon: "snowplow"
+    -   
+        title: "Limpieza de cristales y escaparates"
+        icon: "columns"
+    -
+        title: "Pulimento y cristalizado de pavimentos"
+        icon: "tint"
+    -
+        title: "Desinfección COVID-19"
+        icon: "first-aid"
+    -   
+        title: "Limpieza de garajes"
+        icon: "car-side"
+    -   
+        title: "Limpieza e higienización de sofás y colchones"
+        icon: "couch"
+    -
+        title: "Limpieza de oficinas y locales comerciales"
+        icon: "store"
+    -
+        title: "Limpieza de daños por incendios o agua"
+        icon: "fire"
 ---
-<div class="container" style="height: 300px;">
-    {{page.title}}
+<div class="container">
+    <h1>{{page.title}}</h1>
+</div>
+<div class="container flexible cols2">
+    {% for service in page.services %}
+    <div class="center">
+        <i class="fa-solid fa-{{service.icon}} big"></i>
+        <h3>{{service.title}}</h3>
+    </div>
+    {% endfor %}
+</div>
+<div style="
+background-image: url('images/save.jpg');
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+">
+<div class="white-overlay"></div>
+<div class="container paddedx3">
+    <div class="squareBox paddedx3">
+        <h2>Pide tu presupuesto</h2>
+        <h3>Te respondemos sin compromiso</h3>
+        <div><a href="#contacto" class="button">Contáctanos</a></div>
+    </div>
+</div>
 </div>

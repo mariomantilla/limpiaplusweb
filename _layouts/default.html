@@ -1,0 +1,74 @@
+---
+---
+<!doctype html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{page.title}} - {%endif%}{{site.data.general.title}}</title>
+    <meta name="description" content="{{site.data.general.description}}">
+    <meta name="author" content="{{site.data.general.title}}">
+
+    <meta property="og:title" content="{{site.data.general.title}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{site.data.general.url}}">
+    <meta property="og:description" content="{{site.data.general.description}}">
+    <meta property="og:image" content="/favicon.png">
+
+    <link rel="icon" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+
+    <link rel="stylesheet" href="/css/styles.css?v=1.0">
+    <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.4.1' type='text/css' media='all' />
+
+    <meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="{{site.data.general.url}}{{page.url}}" />
+
+</head>
+
+<body>
+    <header>
+        <div class="row gray">
+            <div class="container right padded">
+                <a href="tel:{{site.data.general.phone}}">{{site.data.general.phone}}</a> / <a href="mailto:{{site.data.general.email}}" target="_blank">{{site.data.general.email}}</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container paddedx2">
+                <a href="/" rel="home">
+                    <img width="408" height="100" src="/images/logo.png" class="logo" alt="Limpiaplus" sizes="(max-width: 408px) 100vw, 408px">
+                </a>
+                <nav>
+                    <a href="/#" {% if page.url == '/' %}class="active"{% endif %}>Inicio</a>
+                    {% assign sections = site.sections | sort: "order" %}
+                    {% for section in sections %}
+                        |
+                        <a href="/#{{section.path | remove: "_sections/" | remove: ".html" }}">{{ section.title }}</a>
+                    {% endfor %}
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        {{content}}
+    </main>
+    <footer>
+        <div class="container">
+            &copy; {{site.data.general.title}} {{site.time | date: "%Y"}}
+            <div style="float:right">
+                {% for legal in site.legal %}
+                <a href="{{legal.url}}">{{legal.title}}</a>
+                {% unless forloop.last %} | {% endunless %}
+                {% endfor %}
+            </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/adb72a7aa1.js" crossorigin="anonymous"></script>
+    <script src="/scripts/scripts.js"></script>
+</body>
+
+</html>
