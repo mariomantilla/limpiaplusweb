@@ -1,5 +1,4 @@
 let form = document.querySelector('#contactForm');
-let submit = document.querySelector('#contactForm a.button');
 
 function showError(msg) {
     let error = document.querySelector('#contactForm .error');
@@ -7,6 +6,7 @@ function showError(msg) {
 }
 
 if (form) {
+    let submit = document.querySelector('#contactForm a.button');
     submit.addEventListener('click', function (e) {
 
         showError('');
@@ -52,5 +52,31 @@ if (form) {
             message: message,
         }));
 
+    });
+}
+
+
+function getCookie(name) {
+    let result = false
+    document.cookie.split(';').forEach(function (cookie) {
+        let parts = cookie.split('=');
+        if (parts[0].trim() == name) {
+            result = parts[1];
+        }
+    });
+    return result;
+}
+
+const consentEvent = new Event('consent');
+
+if (getCookie('limpiaplusConsent'))  {
+    console.log('consent given');
+    document.dispatchEvent(consentEvent);
+} else {
+    document.getElementById('consentModal').style.height = '200px';
+    document.getElementById('consentModal').style.bottom = '0px';
+    document.addEventListener('consent', function () {
+        document.getElementById('consentModal').style.height = '0px';
+        document.getElementById('consentModal').style.bottom = '-200px';
     });
 }

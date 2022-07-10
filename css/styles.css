@@ -414,3 +414,15 @@ footer a:hover {
     color: #1f6180;
     font-weight: 600;
 }
+
+#consentModal {
+    background-color: #1f6180;
+    color: #fff;
+    position: fixed;
+    bottom: -200px;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 40px;
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}

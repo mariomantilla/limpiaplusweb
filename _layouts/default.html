@@ -35,7 +35,7 @@
     <header>
         <div class="row gray">
             <div class="container right padded">
-                <a href="tel:{{site.data.general.phone}}">{{site.data.general.phone}}</a> / <a href="mailto:{{site.data.general.email}}" target="_blank">{{site.data.general.email}}</a>
+                <a class="phone_link" href="tel:{{site.data.general.phone}}">{{site.data.general.phone}}</a> / <a href="mailto:{{site.data.general.email}}" target="_blank">{{site.data.general.email}}</a>
             </div>
         </div>
         <div class="row">
@@ -57,6 +57,14 @@
     <main>
         {{content}}
     </main>
+    <div id="consentModal">
+        <div class="center">
+        Usamos cookies para mejorar tu experiencia. Si continúas navegando, consideramos que aceptas su uso acorde con nuestra <a href="/legal/cookies.html">Política de cookies</a>.
+        </div>
+        <div class="center">
+            <a class="button" onclick="document.cookie='limpiaplusConsent=true;max-age=31536000';document.dispatchEvent(consentEvent);">Aceptar</a>
+        </div>
+    </div>
     <footer>
         <div class="container">
             &copy; {{site.data.general.title}} {{site.time | date: "%Y"}}
@@ -68,6 +76,49 @@
             </div>
     </footer>
     <script src="https://kit.fontawesome.com/adb72a7aa1.js" crossorigin="anonymous"></script>
+    <script id="analyticsLoader">
+        document.addEventListener('consent', function () {
+            j=document.createElement('script');
+            j.async = true;
+            j.src="https://www.googletagmanager.com/gtag/js?id=UA-66742317-2";
+            document.getElementById('analyticsLoader').parentNode.insertBefore(j,document.getElementById('analyticsLoader'));
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-66742317-2');
+            gtag('config', 'AW-953708620');
+
+            function gtag_report_conversion(url) {
+                var callback = function () {
+                    console.log('converted')
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-953708620/sjQJCI-N5dIBEMzg4cYD',
+                    'value': 1.0,
+                    'currency': 'EUR',
+                    'event_callback': callback
+                });
+                return false;
+            }
+            function gtag_report_phone_conversion(url) {
+                var callback = function () {
+                    console.log('phone_converted')
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-953708620/4PfJCLKN1dIBEMzg4cYD',
+                    'event_callback': callback
+                });
+                return false;
+            }
+            window.addEventListener("load", function () {
+                document.getElementsByClassName("google-form-conversion")[0].addEventListener("click", gtag_report_conversion);
+                document.querySelector(".call-now-button").addEventListener("click", gtag_report_phone_conversion);
+                document.querySelector(".phone_link").addEventListener("click", gtag_report_phone_conversion);
+            });
+
+        })
+    </script>
     <script src="/scripts/scripts.js"></script>
 </body>
 
