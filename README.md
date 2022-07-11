@@ -1,4 +1,4 @@
 # limpiaplusweb
-Repo of the corporate web for <a href="https://limpiaplus.com" target="_blank">Limpiaplus</a>
+Repo of the corporate web for [Limpiaplus](https://limpiaplus.com)
 
 © Limpiaplus, Gestión integral de limpieza 2022, all rights reserved
