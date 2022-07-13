@@ -39,7 +39,8 @@ if (form) {
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             if (this.status == 200) {
-                document.querySelector('#contactForm .success').innerHTML = 'Mensaje enviado correctamente';
+                document.querySelector('.formWrapper .success').innerHTML = 'Mensaje enviado correctamente';
+                document.querySelector('#contactForm').style.height = 0;
             } else {
                 showError('Error al enviar el mensaje');
             }
