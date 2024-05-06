@@ -1,23 +1,17 @@
 ---
 layout: default 
 ---
-{% comment %}
-<section class="banner">
+<section class="hero">
     <div class="overlay"></div>
-    <div class="container">
-        <h3>Desinfección COVID-19</h3>
-        <h4>
-            Utilizamos las técnicas y productos recomendados por el Ministerio de Sanidad contra el nuevo coronavirus. <br>
-            Incluido el Certificado de Desinfección para la tranquilidad de los usuarios. <br>
-            Dada la situación actual, Limpiaplus ha centrado sus recursos en ofrecer este nuevo servicio. Comprometidos con la seguridad y la higiene cuando más lo necesitas.
-        </h4>
+    <div class="container paddedx3" style="padding-top: 0; text-align: center;">
+        <h1>Servicios de limpieza en Córdoba y provincia</h1>
+        <h2>Nos especializamos en limpieza de comunidades y mancomunidades</h2>
         <div class="spaced">
             <a class="button" href="#contacto">Más información</a>
             <a class="button call-now-button" href="tel:{{site.phone}}">Llama ahora y pide presupuesto</a>
         </div>
     </div>
 </section>
-{% endcomment %}
 {% assign sections = site.sections | sort: "order" %}
 {% for section in sections %}
     <section class="row" id="{{section.path | remove: "_sections/" | remove: ".html" }}">
