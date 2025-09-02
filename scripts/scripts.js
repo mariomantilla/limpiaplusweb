@@ -38,11 +38,10 @@ if (form) {
 
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
-            if (this.status == 200) {
-                document.querySelector('.formWrapper .success').innerHTML = 'Mensaje enviado correctamente';
-                document.querySelector('#contactForm').style.height = 0;
+                if (this.status == 200) {
+                window.location.href = '/gracias.html';
             } else {
-                showError('Error al enviar el mensaje');
+                showError('Error al enviar el formulario');
             }
         }
         xhttp.open("POST", "https://hook.eu1.make.com/gfydbrtbiynpj1i4iwxcxxjpk3itgcxi");
