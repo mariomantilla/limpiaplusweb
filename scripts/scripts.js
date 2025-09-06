@@ -66,15 +66,3 @@ function getCookie(name) {
     });
     return result;
 }
-
-const consentEvent = new Event('consent');
-
-if (getCookie('limpiaplusConsent'))  {
-    console.log('consent given');
-    document.dispatchEvent(consentEvent);
-} else {
-    document.getElementById('consentModal').style.bottom = '0px';
-    document.addEventListener('consent', function () {
-        document.getElementById('consentModal').style.bottom = '-100%';
-    });
-}

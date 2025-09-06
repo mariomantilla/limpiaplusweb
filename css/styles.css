@@ -170,6 +170,10 @@ nav {
     justify-content: space-evenly;
 }
 
+table {
+    width: 100%; /* Make the table fill the available width */
+}
+
 a.button {
     padding: 10px 30px;
     border-radius: 25px;

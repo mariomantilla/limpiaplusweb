@@ -5,22 +5,51 @@
 <html lang="es">
 
 <head>
-		<!-- Google Search Console -->
-		<meta name="google-site-verification" content="1XNq-ZSRKgatHv2g7owp1V_AVhwsNZbyD8yR9L6j2YY" />
-		<!-- Google Ads -->
-		<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17437447837"></script>
-		<script>   window.dataLayer = window.dataLayer || [];   function gtag()
-		{dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 
-		'AW-17437447837'); </script>
-		<!-- Google Tag Manager -->
-		<script>
-		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-N9V4CTKN');
-		</script>
-		<!-- End Google Tag Manager -->
+
+    <script src="{{ '/scripts/pdcc.min.js' | relative_url }}" fetchpriority="high"></script>
+    <script type="text/javascript">
+        PDCookieConsent.config({
+            "brand": {
+                "dev": false,
+                "name": "Limpiaplus",
+                "url": "https://limpiaplus.com",
+                "websiteOwner": ""
+            },
+            "showRejectButton": true,
+            "cookiePolicyLink": "https://limpiaplus.com/legal/cookies",
+            "hideModalIn": ["https://limpiaplus.com/legal/cookies"],
+            "styles": {
+                "primaryButton": {
+                    "bgColor": "#EEEEEE",
+                    "txtColor": "#333333"
+                },
+                "secondaryButton": {
+                    "bgColor": "#EEEEEE",
+                    "txtColor": "#333333"
+                },
+                "rejectButton": {
+                    "bgColor": "#EEEEEE",
+                    "txtColor": "#333333"
+                }
+            }
+        });
+    </script>
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="1XNq-ZSRKgatHv2g7owp1V_AVhwsNZbyD8yR9L6j2YY" />
+    <!-- Google Ads -->
+    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17437447837"></script>
+    <script>   window.dataLayer = window.dataLayer || [];   function gtag()
+    {dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 
+    'AW-17437447837'); </script>
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N9V4CTKN');
+    </script>
+    <!-- End Google Tag Manager -->
 	
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,6 +77,7 @@
     <link rel="preconnect" href="https://ka-f.fontawesome.com">
 
     <link rel="stylesheet" href="{{ '/css/styles.css?v=1.0' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/pdcc.min.css?v=1.0' | relative_url }}">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.4.1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.4.1&display=swap"></noscript>
 
@@ -88,14 +118,6 @@
     <main>
         {{content}}
     </main>
-    <div id="consentModal">
-        <div class="center">
-        Usamos cookies para mejorar tu experiencia. Si continúas navegando, consideramos que aceptas su uso acorde con nuestra <a href="{{ '/legal/cookies.html' | relative_url }}">Política de cookies</a>.
-        </div>
-        <div class="center">
-            <a class="button" onclick="document.cookie='limpiaplusConsent=true;max-age=31536000';document.dispatchEvent(consentEvent);">Aceptar</a>
-        </div>
-    </div>
     <footer>
         <div class="container">
             &copy; {{site.title}} {{site.time | date: "%Y"}}
@@ -107,7 +129,7 @@
             </div>
         </div>
         <div class="container" style="text-align: center;">
-            Hecho por <a href="https://www.webpros.es">Webpros</a>
+            Hecho por <a href="https://www.mariomantilla.es">Mario Mantilla</a> | <a href="#" class="pdcc-open-modal">Panel Cookies</a>
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/adb72a7aa1.js" crossorigin="anonymous" async="true"></script>
