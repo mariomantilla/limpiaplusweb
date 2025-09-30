@@ -56,7 +56,8 @@ if (form) {
             name: name,
             email: email,
             phone: phone,
-            message: message
+            message: message,
+            bcc: "tracking@eccuo.com"
         }));
     });
 }
