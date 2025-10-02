@@ -6,55 +6,61 @@ function showError(msg) {
 }
 
 if (form) {
-    let submit = document.querySelector('#contactForm a.button');
-    submit.addEventListener('click', function (e) {
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
         showError('');
+
         let privacy = document.querySelector('#contactForm input[name=privacy]').checked;
         if (!privacy) {
-            showError('Debes acceptar la política de privacidad');
-            return
+            showError('Debes aceptar la política de privacidad');
+            return;
         }
+
         let name = document.querySelector('#contactForm input[name=name]').value;
         if (!name) {
             showError('Debes introducir tu nombre');
-            return
+            return;
         }
+
         let email = document.querySelector('#contactForm input[name=email]').value;
         if (!email) {
             showError('Debes introducir tu email');
-            return
+            return;
         }
+
         var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         if (!email.match(validRegex)) {
             showError('Debes introducir un email válido');
-            return
+            return;
         }
+
+        let phone = document.querySelector('#contactForm input[name=phone]').value;
         let message = document.querySelector('#contactForm textarea[name=message]').value;
         if (!message) {
             showError('Debes introducir algún mensaje');
-            return
+            return;
         }
 
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
-                if (this.status == 200) {
+            if (this.status == 200) {
                 window.location.href = '/gracias.html';
             } else {
                 showError('Error al enviar el formulario');
             }
-        }
+        };
         xhttp.open("POST", "https://hook.eu1.make.com/gfydbrtbiynpj1i4iwxcxxjpk3itgcxi");
         xhttp.setRequestHeader("Content-Type", "application/json");
         xhttp.send(JSON.stringify({
-            name: name, 
+            name: name,
             email: email,
+            phone: phone,
             message: message,
+            bcc: "tracking@eccuo.com"
         }));
-
     });
 }
-
 
 function getCookie(name) {
     let result = false
