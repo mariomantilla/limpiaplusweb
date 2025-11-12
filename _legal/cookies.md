@@ -1,5 +1,5 @@
 ---
-title: "Polítical de Cookies"
+title: "Política de Cookies"
 layout: legal
 ---
 
