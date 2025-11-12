@@ -1,9 +1,22 @@
 ---
 title: Contacto
-order: 3
+order: 1
 ---
 <div class="blue">
     <div class="container flexible cols2">
+        <!-- Datos de contacto a la izquierda -->
+        <div>
+            <h1>{{page.title}}</h1>
+            <h2>Visítanos en</h2>
+            <p>{{site.address}}</p>
+            <p>{{site.address2}}</p>
+            <h2>Teléfono</h2>
+            <p><a href="tel:{{site.phone}}">{{site.phone}}</a></p> <!-- Teléfono clickeable -->
+            <h2>Email</h2>
+            <p><a href="mailto:{{site.email}}">{{site.email}}</a></p> <!-- Email clickeable -->
+        </div>
+        
+        <!-- Formulario a la derecha -->
         <div>
             <div class="formWrapper">
                 <form id="contactForm">
@@ -26,7 +39,7 @@ order: 3
                     <div class="center">
                         <div>
                             <label>
-                                <input class="form-control" id="privacy" name="privacy" type="checkbox" required /> 
+                                <input class="form-control" id="privacy" name="privacy" type="checkbox" required />
                                 He leído y acepto la <a href="{{ 'legal/privacy.html' | relative_url }}">política de privacidad</a>
                             </label>
                         </div>
@@ -39,15 +52,6 @@ order: 3
                 <div class="success"></div>
             </div>
         </div>
-        <div class="paddedx3" style="margin-bottom: 50px; box-sizing:border-box;">
-            <h1>{{page.title}}</h1>
-            <h2>Visítanos en</h2>
-            {{site.address}}<br>
-            {{site.address2}}
-            <h2>Teléfono</h2>
-            {{site.phone}} 
-            <h2>Email</h2>
-            {{site.email}}
-        </div>
     </div>
 </div>
+
