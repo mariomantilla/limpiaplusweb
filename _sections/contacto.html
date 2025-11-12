@@ -39,15 +39,15 @@ order: 3
                 <div class="success"></div>
             </div>
         </div>
-        <div class="paddedx3" style="margin-bottom: 50px; box-sizing:border-box;">
+         <div class="paddedx3" style="margin-bottom: 50px; box-sizing:border-box;">
             <h1>{{page.title}}</h1>
             <h2>Visítanos en</h2>
             {{site.address}}<br>
             {{site.address2}}
             <h2>Teléfono</h2>
-            {{site.phone}} 
+            <a href="tel:{{site.phone}}">{{site.phone}}</a>
             <h2>Email</h2>
-            {{site.email}}
+            <a href="mailto:{{site.email}}">{{site.email}}</a>
         </div>
     </div>
 </div>
