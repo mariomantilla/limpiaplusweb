@@ -480,3 +480,16 @@ footer a:hover {
     -webkit-transition: all 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
 }
+
+/* Estilo para los enlaces dentro de la sección de contacto */
+#contacto a {
+    color: white; /* Cambiar color de los enlaces a blanco */
+    text-decoration: none; /* Opcional: quitar subrayado */
+}
+
+#contacto a:hover,
+#contacto a:focus {
+    color: white; /* Mantener el color blanco en hover */
+    text-decoration: underline; /* Opcional: efecto de subrayado */
+}
+
