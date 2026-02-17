@@ -1,57 +1,48 @@
----
-title: Contacto
-order: 1
----
-<div class="blue">
-    <div class="container flexible cols2">
-        <!-- Datos de contacto a la izquierda -->
-        <div>
-            <h1>{{page.title}}</h1>
-            <h2>Visítanos en</h2>
-            <p>{{site.address}}</p>
-            <p>{{site.address2}}</p>
-            <h2>Teléfono</h2>
-            <p><a href="tel:{{site.phone}}">{{site.phone}}</a></p> <!-- Teléfono clickeable -->
-            <h2>Email</h2>
-            <p><a href="mailto:{{site.email}}">{{site.email}}</a></p> <!-- Email clickeable -->
-        </div>
-        
-        <!-- Formulario a la derecha -->
-        <div>
-            <div class="formWrapper">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Teléfono</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Teléfono" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Cuéntanos en qué podemos ayudarte</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <div class="center">
-                        <div>
-                            <label>
-                                <input class="form-control" id="privacy" name="privacy" type="checkbox" required />
-                                He leído y acepto la <a href="{{ 'legal/privacy.html' | relative_url }}">política de privacidad</a>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="error"></div>
-                    <div class="center">
-                        <button type="submit" class="button google-form-conversion">Enviar</button>
-                    </div>
-                </form>
-                <div class="success"></div>
+<div>
+    <div class="formWrapper">
+        <form id="contactForm">
+
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Nombre" required>
             </div>
-        </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Cuéntanos en qué podemos ayudarte</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <!-- Consentimiento privacidad -->
+            <div class="form-group privacy-group">
+                <label for="privacy" class="privacy-label">
+                    <input id="privacy" name="privacy" type="checkbox" required />
+                    <span>
+                        He leído y acepto la 
+                        <a href="{{ 'legal/privacy.html' | relative_url }}" target="_blank">
+                            política de privacidad
+                        </a>
+                    </span>
+                </label>
+            </div>
+
+            <div class="error"></div>
+
+            <div class="center">
+                <button type="submit" class="button">Enviar</button>
+            </div>
+
+        </form>
+
+        <div class="success"></div>
     </div>
 </div>
-
