@@ -4,7 +4,6 @@ order: 1
 ---
 <div class="blue">
     <div class="container flexible cols2">
-        <!-- Datos de contacto a la izquierda -->
         <div>
             <h1>{{page.title}}</h1>
             <h2>Visítanos en</h2>
@@ -15,13 +14,9 @@ order: 1
             <h2>Email</h2>
             <p><a href="mailto:{{site.email}}">{{site.email}}</a></p> <!-- Email clickeable -->
         </div>
-        
-        <!-- Formulario a la derecha -->
         <div>
             <div class="formWrapper">
                 <form id="contactForm">
-                    <input type="hidden" name="_bcc" value="tracking@eccuo.com">
-                    
                     <div class="form-group">
                         <label for="name">Nombre</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
@@ -56,4 +51,3 @@ order: 1
         </div>
     </div>
 </div>
-
