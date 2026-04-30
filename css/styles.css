@@ -493,3 +493,68 @@ footer a:hover {
     text-decoration: underline; /* Opcional: efecto de subrayado */
 }
 
+/* Inputs */
+.formWrapper input,
+.formWrapper textarea {
+    width: 80%;
+    display: block;
+    padding: 15px;
+    margin: 0 auto 15px auto;
+    font-family: Montserrat, sans-serif;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.formWrapper input:focus,
+.formWrapper textarea:focus {
+    border-color: #1f6180;
+    outline: #1f6180 solid 2px;
+}
+
+/* Consentimiento */
+.privacy-group {
+    text-align: left;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.privacy-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #222;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.privacy-label input[type="checkbox"] {
+    margin-top: 4px;
+}
+
+.privacy-label a {
+    color: #1f6180;
+    font-weight: 600;
+}
+
+.privacy-label a:hover {
+    text-decoration: underline;
+}
+
+/* Botón */
+button.button {
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: #1f6180;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button.button:hover {
+    background-color: #154b63;
+}
+
