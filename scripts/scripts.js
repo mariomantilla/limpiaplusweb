@@ -11,19 +11,24 @@ if (form) {
 
         showError('');
 
+        // Honeypot: real users never see or fill this field, bots usually do
+        if (document.querySelector('#contactForm input[name=website]').value) {
+            return;
+        }
+
         let privacy = document.querySelector('#contactForm input[name=privacy]').checked;
         if (!privacy) {
             showError('Debes aceptar la política de privacidad');
             return;
         }
 
-        let name = document.querySelector('#contactForm input[name=name]').value;
+        let name = document.querySelector('#contactForm input[name=name]').value.trim();
         if (!name) {
             showError('Debes introducir tu nombre');
             return;
         }
 
-        let email = document.querySelector('#contactForm input[name=email]').value;
+        let email = document.querySelector('#contactForm input[name=email]').value.trim();
         if (!email) {
             showError('Debes introducir tu email');
             return;
@@ -35,8 +40,8 @@ if (form) {
             return;
         }
 
-        let phone = document.querySelector('#contactForm input[name=phone]').value;
-        let message = document.querySelector('#contactForm textarea[name=message]').value;
+        let phone = document.querySelector('#contactForm input[name=phone]').value.trim();
+        let message = document.querySelector('#contactForm textarea[name=message]').value.trim();
         if (!message) {
             showError('Debes introducir algún mensaje');
             return;
@@ -57,6 +62,7 @@ if (form) {
             email: email,
             phone: phone,
             message: message,
+            source: "limpiaplus-web",
             bcc: "tracking@eccuo.com"
         }));
     });
